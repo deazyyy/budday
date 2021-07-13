@@ -10,7 +10,12 @@
     <link rel="stylesheet" type="text/css" href="css/style.css?ver=1.026" />
     <link rel="stylesheet" type="text/css" href="css/responsive.css?ver=1.022" />
     <link rel="icon" href="images/favicon.png" type="image/gif" sizes="10x16">
-    <title>Home - Divs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+    <title>Birthday</title>
 </head>
 
 
@@ -37,6 +42,11 @@ html {
 }
 
 body {
+  padding: 0;
+  margin: 0;
+  background: url(./bg.png);
+}
+.bodyinner{
   display: flex;
   padding: 0;
   margin: 0;
@@ -45,7 +55,7 @@ body {
   min-height: 100vh;
   font-family: "Londrina Solid", cursive;
   position: relative;
-  background: #0d1117;
+  background: rgba(13, 17, 23, 0.8);
 }
 
 .challenge-title {
@@ -100,11 +110,12 @@ body {
   font-weight: 100;
   transform: translateY(85px);
   padding: 1rem 0;
-  background-color: #0d1117;
   -webkit-animation: showUp 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
           animation: showUp 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  
 }
 .hb-container .twentyseven {
+  line-height: 0.9;
      margin: 0;
   font-size: 10rem;
   color: #1f2938;
@@ -118,7 +129,6 @@ body {
   font-size: 5.5rem;
   color: white;
   transform: translateY(-85px);
-  background-color: #0d1117;
   padding: 1rem 0;
   -webkit-animation: showDown 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards 0.4s;
           animation: showDown 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards 0.4s;
@@ -572,8 +582,46 @@ opacity:1;
 
 
 
-
-
+.coloredvalouter{
+  position: relative;
+  width: max-content;
+  margin: auto;
+}
+.coloredvalouter::after{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  content: '';
+  box-shadow:0px -12px 35px 34px rgba(229, 213, 117, 0.4);
+  width: 0px;
+  height: 1px;
+  z-index: 100;
+}
+.coloredval {
+		  font-size: 28px;
+		  background: linear-gradient(to right, #976717, #e5d575, #936517);
+		  background-position: bottom;
+		  -webkit-background-clip: text;
+		  color: transparent;
+		  position: relative;
+		  margin-bottom: -14px;
+		  letter-spacing: 2px;
+		  width: min-content;
+      font-weight: 800;
+      
+      
+		}
+    .coloredbg {
+			color: #2b2e37;
+			position: absolute;
+			top: 50%;
+			z-index: -1;
+			text-shadow: 2px 0 0 #2b2e37, -2px 0 0 #2b2e37, 0 2px 0 #2b2e37,
+			  0 -2px 0 #2b2e37, 1px 1px 0 #2b2e37, -1px -1px 0 #2b2e37,
+			  1px -1px 0 #2b2e37, -1px 1px 0 #2b2e37, 1px 1px 5px #2b2e37;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		  }
 
 
 #Layer_1{width: 400px;position: absolute;left: 5%;bottom: 0;}
@@ -586,10 +634,9 @@ opacity:1;
 
 
 
-
 <body>
+<div class="bodyinner">
     <h1 class="challenge-title">For the most Marvellous Being</h1>
-<h2 class="challenge-subtitle">#28ComponentsOfFebruaryDay24</h2>
 
 
 
@@ -734,7 +781,7 @@ opacity:1;
 
 <div class="hb-container">
     <h3 class="happy">Happy</h3>
-    <h3 class="twentyseven">27th</h3>
+    <h3 class="twentyseven">23rd</h3>
     <h3 class="birthday">Birthday!</h3>
     <div class="ballon">
         <svg id="ballon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 462.4 462.4" style="enable-background:new 0 0 462.4 462.4;" xml:space="preserve">
@@ -757,6 +804,40 @@ opacity:1;
         </svg>
     </div>
 </div>
+
+
+<style>
+  .startup-container{
+    color: #fff;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    position: relative;
+  }
+  .coloredval{margin: auto;}
+  .startup-container h3{font-weight: 200;margin: 10px 0;}
+  .startup-container img{
+    position: absolute;
+    height: 100%;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+</style>
+<div class="startup-container">
+  <img src="./meta.png" alt="">
+  <h2>THE SOCIAL STARTUP FUND</h2>
+  <h3>0xe23eaE040C49b25D949D613E68c124f17C58dA37</h3>
+  <div class="coloredvalouter">
+    <div class="coloredval"> 1000$
+        <div class="coloredbg">
+        1000$
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
 </body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script type="text/javascript">
